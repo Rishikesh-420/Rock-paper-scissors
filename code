@@ -1,0 +1,45 @@
+package com.company;
+import java.util.Scanner;
+import java.util.Random;
+
+public class game {
+    public static void main(String [] args){
+        Random choice = new Random();
+        Scanner sc = new Scanner(System.in);
+        // 0 for rock
+        //1 FOR PAPER
+        // 2 FOR SCISSOR
+        System.out.println("0 for rock , 1 for paper and 2 for Scissor");
+        System.out.println("enter your  input");
+        int user_input = sc.nextInt();
+        int computer_choice = choice.nextInt(3);
+        System.out.println("computer choice");
+        System.out.println(computer_choice);
+
+        if(user_input==computer_choice){
+            System.out.println("Both are equal that's why draw");
+        }
+        else if(user_input==0 && computer_choice==1){
+            System.out.println("GAME OVER: YOU LOSE");
+        }
+        else if(user_input==1 && computer_choice==2){
+            System.out.println("GAME OVER: YOU LOSE");
+        }
+        else if(user_input==0 && computer_choice==2){
+            System.out.println("Congratulations: You won");
+        }
+        else if(user_input==1 && computer_choice==0){
+            System.out.println("Congratulations: you won");
+        }
+        else if (user_input==2 && computer_choice==0){
+            System.out.println("GAME OVER: YOU LOSE");
+        }
+        else if (user_input==2 && computer_choice==1){
+            System.out.println("GAME OVER: YOU LOSE");
+        }
+
+
+
+    }
+
+}
